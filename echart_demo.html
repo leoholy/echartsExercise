@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>echartsDemo</title>
+	<script src="echarts.js"></script>
+</head>
+<body>
+	<!--设置一个容器包裹echarts-->
+	<div id="main"  style="width: 600px; height: 400px;">
+		
+	</div>
+	<script>
+	//初始化echarts实例
+		var myChart = echarts.init(document.getElementById("main"));
+	//指定图表的配置项和数据
+		var option = {
+			title:{
+			text: "echarts_demo实例",
+			},
+			tooltip:{
+
+			},
+			legend:{
+			data:["销量"]
+			}
+			,
+			xAxis:{
+			data:["衬衣","羊毛衫","雪纺绒","裤子","袜子","拖鞋"]
+			},
+			yAxis:{
+
+			},
+			series:[{
+			name:"销量",
+			type:"bar",
+			data:[5,20,36,10,10,20]
+			}
+			]
+		};
+		//使用指定的配置项和数据显示图表。
+		myChart.setOption(option);
+	</script>
+</body>
+</html>
